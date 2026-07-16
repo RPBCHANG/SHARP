@@ -1,18 +1,13 @@
 import './globals.css'
-import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'MOON TV - Explore the Cosmos',
   description: 'High-definition live streams from lunar stations and deep space probes.',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="zh-TW">
       <body>{children}</body>
     </html>
   )

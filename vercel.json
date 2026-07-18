@@ -1,0 +1,16 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/api/config", "destination": "/api/v1/config" },
+    { "source": "/api/sites", "destination": "/api/v1/sites" },
+    { "source": "/api/login", "destination": "/api/v1/login" }
+  ]
+}

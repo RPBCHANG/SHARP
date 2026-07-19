@@ -1,16 +1,18 @@
 {
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/tv.m3u",
       "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Content-Type", "value": "application/json" }
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/api/config", "destination": "/api/v1/config" },
-    { "source": "/api/sites", "destination": "/api/v1/sites" },
-    { "source": "/api/login", "destination": "/api/v1/login" }
   ]
 }
